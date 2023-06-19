@@ -1,46 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+/*Importation des polices*/
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5a40eb;
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+
+  /*box-shadow: 0 0 0 3px red inset;*/
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #212529;
 }
 
-main {
-  padding: 5rem;
+nav {
+  background-color: #fff0e5;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
 }
 
-main > .color > h2 {
-  color: #fff;
-  padding: 2rem;
+nav .checkbtn,
+nav .uncheckbtn {
+  font-size: 1.9rem;
+  color: #130b43;
+  line-height: 5rem;
+  float: right;
+  margin-right: 1rem;
+  cursor: pointer;
+  margin-top: 0.6rem;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+nav label.logo {
+  line-height: 5rem;
+  font-size: 5rem;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: #130b43;
+  padding: 0 3rem;
+}
+
+nav ul {
+  list-style: none;
+  float: right;
+  margin-right: 2rem;
+  margin-top: 0.6rem;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 5rem;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #130b43;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+nav ul li a:hover {
+  background-color: #daa0ac;
+  transition: all 0.5s;
+}
+
+main {
+  /*padding: 5rem;*/
+  display: flex;
+  flex-direction: column;
+}
+
+main .accueil {
+  background-image: url('Img/bck-system-conception.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh + 80px);
+  margin-bottom: 2rem;
 }
 
 h1 {
-  font-size: 3rem;
-  padding: 1rem;
+  font-size: 5rem;
+  margin: 10rem auto;
   font-weight: 900;
   color: #fff;
+  text-align: center;
+  width: 60%;
 }
 
-.color {
+/*********************Le container est attribué aux sections suivant: Couleurs, Polices(family) et Style***********************/
+
+.container {
   border: 1px solid #fff;
   border-radius: 5px;
+  padding: 1rem;
+  color: #fff;
+  margin: 4rem;
+  margin-bottom: 0;
 }
 
-.color > h2 {
-  text-decoration: double;
+.container h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
-.detail {
+/*********************Section Couleur***********************/
+
+.color {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  color: #fff;
 }
 
 .colorBloc {
   width: 10rem;
-  margin: 0.7rem;
+  margin: 0.5rem;
   border: 1px solid #fff;
   border-radius: 5px;
   font-size: 1.5rem;
@@ -48,10 +146,11 @@ h1 {
 
 .colorBloc:hover {
   font-size: 2rem;
-  box-shadow: 10 10px 10px rgba(100, 10, 10, 0.7),
-    10px 10px 10px rgba(100, 10, 10, 0.9);
-  transform: scale(1.17);
-  transition: all 0.4s;
+  box-shadow:
+    /*10px 10px 10px rgba(217, 41, 80, 0.7),*/ 10px 10px 50px
+    rgba(33, 37, 41, 0.9);
+  transform: scale(1.1);
+  transition: all 0.25s linear;
 }
 
 .colorBloc div {
@@ -60,7 +159,6 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 10rem;
-  color: #fff;
 }
 
 .blue {
@@ -69,6 +167,10 @@ h1 {
 
 .bluetwo {
   background-color: #1f6feb;
+}
+
+.bluethree {
+  background-color: #162f44;
 }
 
 .yellow {
@@ -99,14 +201,507 @@ h1 {
   background-color: #448000;
 }
 
+.vertwo {
+  background-color: #1e8e3e;
+}
+
 .violet {
   background-color: #7601d3;
 }
 
+.violetwo {
+  background-color: #7451eb;
+}
+
+.violethree {
+  background-color: #130b43;
+}
+
 .gris {
   background-color: #e2e8f0;
+  color: #000;
 }
 
 .pink {
   background-color: #fff0e5;
+  color: #000;
+}
+
+.orange {
+  background-color: #ff7e05;
+}
+
+.aqua {
+  background-color: #b2ffff;
+  color: #000;
+}
+
+/**********************Section Polices (Family)***************************/
+.family {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.widthFontBox {
+  width: 34.2rem;
+  font-size: 1.13rem;
+  margin-bottom: 0.7rem;
+}
+
+.family .widthFontBox h4 {
+  text-decoration: underline;
+  margin-bottom: 0.7rem;
+  font-size: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.family .widthFontBox p {
+  line-height: 1.5;
+  font-size: 1.4rem;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.regular {
+  font-style: normal;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.merriweather {
+  font-family: 'Merriweather', serif;
+}
+
+.work-sans {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.comic-neue {
+  font-family: 'Comic Neue', cursive;
+}
+
+/**************************Section Style****************************/
+
+.title {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tite {
+  width: 34rem;
+  font-size: 1.13rem;
+  margin-bottom: 0.7rem;
+  margin: 1rem auto;
+}
+
+.style-text h3 {
+  font-size: 1.4rem;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+.tite h4 {
+  margin-bottom: 0.5rem;
+}
+
+.paragraphe .para p {
+  padding-left: 0.8rem;
+}
+
+.para {
+  font-size: 1.13rem;
+  margin-bottom: 0.7rem;
+}
+
+/**********************Section contact************************/
+.contact {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('Img/Bci-ContactPage.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  color: #fff;
+}
+
+.contact h2 {
+  font-size: 1.7rem;
+  font-family: 'Poppins', 'Times New Roman', sans-serif;
+  text-transform: uppercase;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.contact h5,
+.contact label {
+  letter-spacing: 2px;
+}
+
+.callUs,
+.location,
+.business {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.location {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.location .social {
+  margin: auto;
+}
+
+.location .social i {
+  font-size: 2.8rem;
+  margin: 1rem;
+  border-radius: 50%;
+}
+
+.location .social i.ri-facebook-fill {
+  color: #fff;
+  background-color: #1873eb;
+  clip-path: circle(50%);
+}
+
+.location .social i.ri-linkedin-fill {
+  color: #fff;
+  background-color: #1873eb;
+  clip-path: circle(50%);
+}
+
+.location .social i.ri-github-fill {
+  color: #000;
+  background-color: #fff;
+  clip-path: circle(50%);
+}
+
+.iconCall,
+.iconLocation,
+.iconBusiness {
+  display: flex;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.contact i {
+  color: #f1a40e;
+  margin-right: 1rem;
+}
+
+form {
+  margin-left: -9rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  vertical-align: 32rem;
+}
+
+form h2 {
+  text-align: center;
+}
+
+.contact label {
+  font-weight: bold;
+}
+
+[type='email'],
+[type='text'] {
+  margin-bottom: 2rem;
+}
+
+.contact input::placeholder,
+textarea::placeholder {
+  color: #a9a7a7;
+  font-size: 0.99rem;
+}
+
+#message,
+#address {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.mailName {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: 1rem;
+  width: 100%;
+}
+
+.contact input {
+  padding: 10px 12px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact input:focus,
+textarea:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  padding: 10px 12px;
+  color: #fff;
+}
+
+input[type='submit'] {
+  border: none;
+  width: 100%;
+  border-radius: 5rem;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #f1a40e, #a36f05);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  opacity: 0.89;
+}
+
+/***********************Fooooter**********************/
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  background: #283d66;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  text-align: center;
+  color: #c7bfbf;
+}
+
+footer p > span {
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-style: italic;
+  font-weight: 900;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  clip-path: circle(50%);
+  font-size: 2rem;
+  position: absolute;
+  right: 5%;
+  top: 25%;
+  bottom: 25%;
+}
+
+footer a:hover {
+  background: #c7bfbf;
+}
+
+/**********************Utilisation des medias queries pour gérer la responsivité de la page*********************/
+@media (max-width: 999px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    height: 100%;
+  }
+
+  .info {
+    margin-left: -5rem;
+  }
+
+  .contact h2 {
+    margin-bottom: 2rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  input[type='submit'] {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .info {
+    margin-left: -2.5rem;
+  }
+
+  .contact h2 {
+    padding: 1rem;
+    padding-left: 0;
+    font-size: 1.5rem;
+  }
+
+  .callUs,
+  .location,
+  .business {
+    margin-bottom: 1.8rem;
+  }
+
+  .iconCall,
+  .iconLocation,
+  .iconBusiness {
+    font-size: 1.2rem;
+  }
+
+  .contact p {
+    font-size: 13px;
+  }
+
+  .mailName {
+    display: inline-block;
+  }
+
+  [type='email'],
+  [type='text'] {
+    margin-bottom: 2rem;
+  }
+
+  .contact input {
+    width: 100%;
+  }
+
+  footer a {
+    right: 1%;
+    top: 50%;
+    bottom: 0%;
+  }
+}
+
+@media (max-width: 370px) {
+  .info {
+    padding-left: 2.5rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  nav label.logo {
+    font-size: 3rem;
+    padding: 0 1rem;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+    padding: 0.4rem 0rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+    margin: 35% 20% 75% 35%;
+    padding: 1rem;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+@media (max-width: 850px) {
+  nav {
+    margin-bottom: 2rem;
+  }
+
+  nav .checkbtn {
+    display: block;
+  }
+
+  nav ul {
+    position: fixed;
+    width: 80%;
+    height: 30rem;
+    background-color: #fff0e5;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    padding: 1rem;
+  }
+
+  #check:checked ~ .checkbtn {
+    display: none;
+  }
+
+  #check:checked ~ .uncheckbtn {
+    display: block;
+  }
+
+  #check:checked ~ ul {
+    left: 0%;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem;
+  }
+
+  .family .widthFontBox h4 {
+    margin-bottom: 0.7rem;
+    font-size: 1.4rem;
+    padding-left: 1rem;
+  }
 }

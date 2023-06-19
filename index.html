@@ -1,103 +1,398 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website Design System</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website Design System</title>
+  <link rel="stylesheet" href="style.css" />
+  <!--Importation d'icone de menu-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="ri-menu-line"></i>
+    </label>
+    <label for="check" class="uncheckbtn">
+      <i class="ri-menu-unfold-fill"></i>
+    </label>
+    <label class="logo"><a
+        href="https://project-03-build-a-website-design-system-josephi1.kadea-academy-2023-kin-c2.repl.co/"
+        style="text-decoration: none; color: #130b43;">Itax</a></label>
+    <ul>
+      <li><a href="#top">Accueil</a></li>
+      <li><a href="#color">Couleurs</a></li>
+      <li><a href="#family">Polices</a></li>
+      <li><a href="#style">Style</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main id="top">
+    <section class="accueil">
       <h1>Mon guide de style pour site web</h1>
-      <section class="color">
-        <h2>Couleurs</h2>
+    </section>
 
-        <div class="detail">
-          <div class="colorBloc blue">
-            <div>
-              <h5>Bleu</h5>
-              <span>#2176ff</span>
-            </div>
-          </div>
+    <!--*****************************************************-->
+    <!--Section Couleurs-->
+    <span id="color" style="margin-bottom: 2rem;"></span>
+    <section class="container">
+      <h2>Couleurs</h2>
 
-          <div class="colorBloc bluetwo">
-            <div>
-              <h5>Bleu 2</h5>
-              <span>#1f6feb</span>
-            </div>
-          </div>
-
-          <div class="colorBloc yellow">
-            <div>
-              <h5>Jaune</h5>
-              <span>#f0a30e</span>
-            </div>
-          </div>
-
-          <div class="colorBloc blueBlack">
-            <div>
-              <h5>Bleu-noir</h5>
-              <span>#212529</span>
-            </div>
-          </div>
-
-          <div class="colorBloc blueBlacktwo">
-            <div>
-              <h5>Bleu-noir 2</h5>
-              <span>#29233f</span>
-            </div>
-          </div>
-
-          <div class="colorBloc black">
-            <div>
-              <h5>Noir</h5>
-              <span>#010409</span>
-            </div>
-          </div>
-
-          <div class="colorBloc blackTwo">
-            <div>
-              <h5>Noir 2</h5>
-              <span>#0d1117</span>
-            </div>
-          </div>
-
-          <div class="colorBloc redoux">
-            <div>
-              <h5>Rouge doux</h5>
-              <span>#d92950</span>
-            </div>
-          </div>
-
-          <div class="colorBloc vert">
-            <div>
-              <h5>Vert</h5>
-              <span>#448000</span>
-            </div>
-          </div>
-
-          <div class="colorBloc violet">
-            <div>
-              <h5>Violet</h5>
-              <span>#7601d3</span>
-            </div>
-          </div>
-
-          <div class="colorBloc gris">
-            <div>
-              <h5>Gris</h5>
-              <span>#e2e8f0</span>
-            </div>
-          </div>
-
-          <div class="colorBloc pink">
-            <div>
-              <h5>Rose</h5>
-              <span>#fff0e5</span>
-            </div>
+      <div class="color">
+        <div class="colorBloc blue">
+          <div>
+            <h5>Bleu</h5>
+            <span>#2176ff</span>
           </div>
         </div>
+
+        <div class="colorBloc bluetwo">
+          <div>
+            <h5>Bleu 2</h5>
+            <span>#1f6feb</span>
+          </div>
+        </div>
+
+        <div class="colorBloc bluethree">
+          <div>
+            <h5>Bleu 3</h5>
+            <span>#162f44</span>
+          </div>
+        </div>
+
+        <div class="colorBloc yellow">
+          <div>
+            <h5>Jaune</h5>
+            <span>#f0a30e</span>
+          </div>
+        </div>
+
+        <div class="colorBloc blueBlack">
+          <div>
+            <h5>Bleu-noir</h5>
+            <span>#212529</span>
+          </div>
+        </div>
+
+        <div class="colorBloc blueBlacktwo">
+          <div>
+            <h5>Bleu-noir 2</h5>
+            <span>#29233f</span>
+          </div>
+        </div>
+
+        <div class="colorBloc black">
+          <div>
+            <h5>Noir</h5>
+            <span>#010409</span>
+          </div>
+        </div>
+
+        <div class="colorBloc blackTwo">
+          <div>
+            <h5>Noir 2</h5>
+            <span>#0d1117</span>
+          </div>
+        </div>
+
+        <div class="colorBloc redoux">
+          <div>
+            <h5>Rouge doux</h5>
+            <span>#d92950</span>
+          </div>
+        </div>
+
+        <div class="colorBloc vert">
+          <div>
+            <h5>Vert</h5>
+            <span>#448000</span>
+          </div>
+        </div>
+
+        <div class="colorBloc vertwo">
+          <div>
+            <h5>Vert 2</h5>
+            <span>#1e8e3e</span>
+          </div>
+        </div>
+
+        <div class="colorBloc violet">
+          <div>
+            <h5>Violet</h5>
+            <span>#7601d3</span>
+          </div>
+        </div>
+
+        <div class="colorBloc violetwo">
+          <div>
+            <h5>Violet 2</h5>
+            <span>#7451eb</span>
+          </div>
+        </div>
+
+        <div class="colorBloc violethree">
+          <div>
+            <h5>Violet 3</h5>
+            <span>#130b43</span>
+          </div>
+        </div>
+
+        <div class="colorBloc gris">
+          <div>
+            <h5>Gris</h5>
+            <span>#e2e8f0</span>
+          </div>
+        </div>
+
+        <div class="colorBloc pink">
+          <div>
+            <h5>Rose</h5>
+            <span>#fff0e5</span>
+          </div>
+        </div>
+        <div class="colorBloc orange">
+          <div>
+            <h5>Orange</h5>
+            <span>#ff7e05</span>
+          </div>
+        </div>
+
+        <div class="colorBloc aqua">
+          <div>
+            <h5>Aqua</h5>
+            <span>#b2ffff</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--*****************************************************-->
+    <!--Section Polices-->
+    <span id="family" style="margin-bottom: 2rem;"></span>
+    <section class="container">
+      <h2>Polices</h2>
+      <div class="family">
+        <div class="widthFontBox">
+          <div class="poppins">
+            <h4>Poppins</h4>
+            <p class="regular">Vif juge, trempez ce blond whisky aqueux.</p>
+            <p class="bold">Vif juge, trempez ce blond whisky aqueux.</p>
+            <p class="italic">Vif juge, trempez ce blond whisky aqueux.</p>
+          </div>
+        </div>
+
+        <div class="widthFontBox">
+          <div class="roboto">
+            <h4>Roboto</h4>
+            <p class="regular">Vif juge, trempez ce blond whisky aqueux.</p>
+            <p class="bold">Vif juge, trempez ce blond whisky aqueux.</p>
+            <p class="italic">Vif juge, trempez ce blond whisky aqueux.</p>
+          </div>
+        </div>
+
+        <div class="widthFontBox">
+          <div class="merriweather">
+            <h4>Merriweather</h4>
+            <p class="regular">Vif juge, trempez ce blond whisky aqueux.</p>
+            <p class="bold">Vif juge, trempez ce blond whisky aqueux.</p>
+            <p class="italic">Vif juge, trempez ce blond whisky aqueux.</p>
+          </div>
+        </div>
+
+        <div class="widthFontBox">
+          <div class="work-sans">
+            <h4>Work Sans</h4>
+            <p class="regular">Vif juge, trempez ce blond whisky aqueux.</p>
+            <p class="bold">Vif juge, trempez ce blond whisky aqueux.</p>
+            <p class="italic">Vif juge, trempez ce blond whisky aqueux.</p>
+          </div>
+        </div>
+
+        <div class="widthFontBox">
+          <div class="raleway">
+            <h4>Raleway</h4>
+            <p class="regular">Vif juge, trempez ce blond whisky aqueux.</p>
+            <p class="bold">Vif juge, trempez ce blond whisky aqueux.</p>
+            <p class="italic">Vif juge, trempez ce blond whisky aqueux.</p>
+          </div>
+        </div>
+
+        <div class="widthFontBox">
+          <div class="comic-neue">
+            <h4>Comic Neue</h4>
+            <p class="regular">Vif juge, trempez ce blond whisky aqueux.</p>
+            <p class="bold">Vif juge, trempez ce blond whisky aqueux.</p>
+            <p class="italic">Vif juge, trempez ce blond whisky aqueux.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!--*****************************************************-->
+    <!--/*******Section Style***********/-->
+    <span id="style" style="margin-bottom: 2rem;"></span>
+    <section class="container">
+      <h2>Style de texte</h2>
+      <div class="style-text">
+        <h3>Titres</h3>
+        <div class="title">
+          <div class="tite">
+            <h4>h1 : Titre principale de la page</h4>
+            <p>Font-size: 2rem</p>
+            <p>Font-weight: 800-900</p>
+            <p>Font-family: Roboto-Poppins</p>
+            <p>Font-style: Regular (Normal)</p>
+            <p>Commentaire: Je l'utilise activement, c'est l'élément qui décrit en premier une page web.</p>
+          </div>
+          <div class="tite">
+            <h4>h2 : Sous-titre 2</h4>
+            <p>Font-size: 1.7rem</p>
+            <p>Font-weight: 400-600</p>
+            <p>Font-family: Merriweather</p>
+            <p>Font-style: Regular (Normal)</p>
+            <p>Commentaire: Je l'utilise activement, ça m'aide à structurer ma page en créant des sous-titres.</p>
+          </div>
+          <div class="tite">
+            <h4>h3 : Sous-titre 3</h4>
+            <p>Font-size: 1.4rem</p>
+            <p>Font-weight: 400</p>
+            <p>Font-family: Merriweather</p>
+            <p>Font-style: Regular (Normal)</p>
+            <p>Commentaire: De même que l'h2, j'utilise aussi l'h3 pour la même raison, mais occasionnellement.</p>
+          </div>
+          <div class="tite">
+            <h4>h4 : Sous-titre 4</h4>
+            <p>Font-size: 1.1rem</p>
+            <p>Font-weight: 400-600</p>
+            <p>Font-family: Merriweather</p>
+            <p>Font-style: Regular (Normal)</p>
+            <p>Commentaire: Je ne l'utilise pas vraiment car il me manque d'occaz de l'utiliser.</p>
+          </div>
+          <div class="tite">
+            <h4>h5 : Sous-titre 5</h4>
+            <p>Font-size: 0.8rem</p>
+            <p>Font-weight: 400</p>
+            <p>Font-family: Merriweather</p>
+            <p>Font-style: Regular (Normal)</p>
+            <p>Idem que l'h4.</p>
+          </div>
+          <div class="tite">
+            <h4>h6 : Sous-titre 6</h4>
+            <p>Font-size: 0.5rem</p>
+            <p>Font-weight: 400</p>
+            <p>Font-family: Merriweather</p>
+            <p>Font-style: Regular (Normal)</p>
+            <p>Commentaire: Je ne l'utilise quasiment pas, sûrement par manque d'occaz.</p>
+          </div>
+        </div>
+
+        <h3>Paragraphe</h3>
+        <div class="paragraphe">
+          <div class="para">
+            <h4>P: texte du paragraphe</h4>
+            <p>Font-size: .8rem-1.2rem</p>
+            <p>Font-weight: 400</p>
+            <p>Font-family: Work Sans-Raleway-Comic Neue</p>
+            <p>Font-style: Regular (Normal)-italic</p>
+            <p>Commentaire: Je l'utilise activement.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      </div>
+
+
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+
+
+
+    <!--*****************************************************-->
+    <!--/*******Section Contact***********/-->
+    <span id="contact" style="margin-bottom: 2rem;"></span>
+    <div class="contact">
+      <section class="info">
+        <h2>Me Contacter</h2>
+        <article class="callUs">
+          <article class="iconCall">
+            <i class="ri-phone-fill"></i>
+            <h5>M'Appeler</h5>
+          </article>
+          <p>+243 810-191-650 &nbsp; +243 977-873-421</p>
+        </article>
+
+        <article class="location">
+          <article class="iconLocation">
+            <i class="ri-map-pin-line"></i>
+            <h5>Localisation</h5>
+          </article>
+          <p>32/B Pululu, Matete, Kinshasa, RDC</p>
+        </article>
+
+        <article class="location">
+          <article class="iconLocation">
+            <i class="ri-user-add-line"></i>
+            <h5>Réseaux sociaux</h5>
+          </article>
+          <div class="social">
+            <a href="https://www.facebook.com/joseph.itakala.102" target="_blank" style="text-decoration: none;"><i
+                class="ri-facebook-fill"></i></a>
+            <a href="https://linkedin.com/in/joseph-itakala-2a6465250" target="_blank" style="text-decoration: none;"><i
+                class="ri-linkedin-fill"></i></a>
+            <a href="https://github.com/Joseph-Itakala" style="text-decoration: none;" target="_blank"><i
+                class="ri-github-fill"></i></a>
+          </div>
+        </article>
       </section>
-    </main>
-  </body>
+
+      <!--Section Feedback 2-->
+
+
+      <form method="post">
+        <h2>FeedBack</h2>
+        <article class="mailName">
+          <section>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" placeholder="Entrez une adresse mail valide" required>
+          </section>
+          <section>
+            <label for="name">Nom</label><br>
+            <input type="text" id="name" name="name" placeholder="Saisissez votre nom" required>
+          </section>
+        </article>
+
+        <article>
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" placeholder="Saisissez votre message" rows="5" cols="35"></textarea>
+        </article>
+
+        <article>
+          <input type="submit" value="Envoyer">
+        </article>
+      </form>
+    </div>
+
+  </main>
+
+  <!--*****************************************************-->
+    <!--/*******Section Footer***********/-->
+  <footer>
+    <div>
+      <p>Copyright &copy; 2023 | Designed by <span>Joseph Itakala</span>.</p>
+      <a href="#top"><i class="ri-arrow-up-s-line"></i></a>
+    </div>
+  </footer>
+</body>
+
 </html>
